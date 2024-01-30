@@ -15,7 +15,7 @@ router.get('/', async (req, res) =>{
    }
 });
 
-router.get(':id/', async (req, res) =>{
+router.get('/:id', async (req, res) =>{
     // find one category by its 'id' value => Include associated Products
     try{
         const categoriesData = await Category.findByPk(req.params.id, {
@@ -53,7 +53,7 @@ router.put('/:id', async (req, res) =>{
             },
         });
 
-        if(!newCategory){
+        if(!newCategory[0]){
             res.status(404).json({ message: `No Category found with this id to Update.`})
             return;
         };
