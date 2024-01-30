@@ -19,7 +19,7 @@ router.get('/:id', async (req, res) =>{
     // find one category by its 'id' value => Include associated Products
     try{
         const categoriesData = await Category.findByPk(req.params.id, {
-            include: ({ model: Product}),
+            include: [{ model: Product}],
         });
         //If the category doesnt exist, a 404 response will be sent.
         if(!categoriesData){
@@ -52,7 +52,6 @@ router.put('/:id', async (req, res) =>{
                 id: req.params.id,
             },
         });
-
         if(!newCategory[0]){
             res.status(404).json({ message: `No Category found with this id to Update.`})
             return;
