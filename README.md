@@ -67,11 +67,11 @@ Once having those dependencies and packages installed in your machine:
 - JavaScript.
 - Node JS.
 - Express JS
-- MySQL
+- MySQL.
 - Sequelize
 
 ## Mock Up
-[Descriptive Video](#)
+[Descriptive Video](https://drive.google.com/file/d/1LAjg45Ebf1EKmjqGdNRwZQ4x_BWB7o1Y/view?usp=sharing)
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
